@@ -1,0 +1,67 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><element><id>UMLClass</id><coordinates><x>259</x><y>91</y><w>147</w><h>63</h></coordinates><panel_attributes>Interface
+CardContainer
+--
++ getCardCount(): int
++ getCard(int n): Card
++iterator()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>259</x><y>203</y><w>147</w><h>91</h></coordinates><panel_attributes>CardContainerImpl
+--
+# cards: List&lt;Card&gt;
+
+--
++ getCardCount(): int
++ getCardCount(int n): Card</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>322</x><y>147</y><w>70</w><h>70</h></coordinates><panel_attributes>lt=&lt;.
+implements</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>154</x><y>336</y><w>147</w><h>70</h></coordinates><panel_attributes>CardHand
+--
+- hasAce: boolean
+--
++ addCard(Card): void
++ getHandScore(): int
++ hasAce(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>259</x><y>0</y><w>147</w><h>49</h></coordinates><panel_attributes>CardContainerIterator
+--
++ hasNext(): boolean
++ next(): Card</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>385</x><y>336</y><w>147</w><h>77</h></coordinates><panel_attributes>CardDeck
+--
+- suit: char
+--
++ shuffle(): void
++ deal(CardHand): void
++ getCard(int): Card</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>224</x><y>287</y><w>119</w><h>63</h></coordinates><panel_attributes>lt=&lt;-
+extends</panel_attributes><additional_attributes>150;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>322</x><y>287</y><w>154</w><h>63</h></coordinates><panel_attributes>lt=&lt;-
+extends</panel_attributes><additional_attributes>10;10;200;70</additional_attributes></element><element><id>Relation</id><coordinates><x>322</x><y>42</y><w>49</w><h>63</h></coordinates><panel_attributes>lt=&lt;-
+extends</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>441</x><y>126</y><w>147</w><h>84</h></coordinates><panel_attributes>Card
+--
+- suit: char {S, H, D, C}
+- face: int {1-13}
+--
++ getSuit(): char
++ getFace(): int
++ getFaceValue(): int
++ formatCard(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>511</x><y>42</y><w>70</w><h>98</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+aggregation</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>112</x><y>588</y><w>147</w><h>112</h></coordinates><panel_attributes>BlackJackGame
+--
+- spiller: CardHand
+- dealer: CardHand
+- deck: CardDeck
+- bet: double
+- saldo: double
+--
++ hit(): void
++ dealerHit(): void
++getResult(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>441</x><y>581</y><w>147</w><h>63</h></coordinates><panel_attributes>ToFile
+--
+- filepath: String
+--
++ writeToFile(List)
++ loadFile: List</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>266</x><y>434</y><w>147</w><h>126</h></coordinates><panel_attributes>Controller
+--
+- blackJackGame: BlackJackGame
+- filehandler: ToFile
+- isOver: boolean
+--
++ handlebuttonClick(): void
++ hit(): void
++ stand(): void
++ doubleBet(): void
+- writeFile()
+- loadFile()
+- endState()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>175</x><y>553</y><w>182</w><h>49</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>240;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>553</y><w>196</w><h>42</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;260;40</additional_attributes></element></diagram>

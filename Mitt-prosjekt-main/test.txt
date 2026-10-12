@@ -1,0 +1,3 @@
+Dealer: 17;Spiller: 14;Bet: 10;Result: Dealer vant  You won 0.0
+Dealer: 9;Spiller: 24;Bet: 20;Result: Spiller bust  You won 0.0
+Dealer: 19;Spiller: 19 / 9;Bet: 40.0;Result: Draw, pengene tilbake  You won 40.0
